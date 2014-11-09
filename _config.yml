@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: dev
+name: Simmer
 description: A Web platform for science in action.
 author:
   name: Oliver Lade
@@ -14,6 +14,9 @@ exclude: ['img', 'css', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']
+
+source: app
+destination: dist
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
