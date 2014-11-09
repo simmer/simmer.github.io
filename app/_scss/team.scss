@@ -1,0 +1,42 @@
+/* Team page styles. */
+
+#team .avatar.image {
+  width: 100px;
+  height: 100px;
+}
+
+#team .member.info {
+  display: inline-block;
+  vertical-align: middle;
+
+  .name {
+    font-weight: bold;
+  }
+  .position {
+    color: grey;
+    font-size: 0.8em;
+  }
+  .social {
+    a {
+      color: grey;
+      text-decoration: none;
+
+      :hover {
+        transition-delay: 0s;
+        transition-duration: 0.3s;
+        transition-property: color;
+        transition-timing-function: ease-out;
+
+        &.facebook {
+          color: darkblue;
+        }
+        &.google.plus {
+          color: orangered;
+        }
+        &.github {
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/** Main landing page styles. */
+
+h1 {
+  //  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  margin: .8em 0 .6em 0;
+  color: white;
+  line-height: 1.2em;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 3em;
+}
+
+.banner {
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &.primary {
+    height: 800px;
+    background-image: url("/img/chef-tools.jpg");
+  }
+  &.secondary {
+    height: 500px;
+    background-image: url("/img/open-science.jpg");
+  }
+}
+
+.section, .signup {
+  margin-left: auto !important;
+  margin-right: auto  !important;
+}
+
+.signup {
+  width: 500px;
+}
+
+.section {
+  max-width: 1024px;
+  padding: 0.5em;
+
+  &.decoration {
+    text-align: center;
+  }
+}
+
+#home .signup {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home .alternate.section {
+  background-color: #f3f6fb;
+}
+
+.feature.icon {
+  font-size: 10em;
+}
+
+.cta {
+  text-align: center;
+}
+
+.subtle {
+  color: grey;
+}

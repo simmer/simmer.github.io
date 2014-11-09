@@ -1,0 +1,102 @@
+/* Includes */
+@import 'home';
+@import 'team';
+@import 'contact';
+
+@font-face {
+  font-family: "Latin Modern";
+  src: url('/fonts/lmroman10-regular.otf');
+}
+@font-face {
+  font-family: "Latin Modern";
+  src: url('/fonts/lmroman10-bold.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Latin Modern";
+  src: url('/fonts/lmroman10-italic.otf');
+  font-style: italic;
+}
+@font-face {
+  font-family: "Latin Modern";
+  src: url('/fonts/lmroman10-bolditalic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", serif;
+  font-size: 16pt;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Latin Modern", serif;
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  padding-top: 0;
+}
+h2 {
+  font-size: 2.5rem;
+}
+
+body > footer,
+body > header {
+  background-color: #101b27;
+  color: white;
+
+  // Clear the floats.
+  overflow: auto;
+  width: 100%;
+
+  > .container {
+    line-height: 5em;
+  }
+}
+
+.logo {
+  font-family: "Latin Modern", serif;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.logo.mark {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  background-image: url("/img/icon/icon-large-white.png");
+  //background-image: url("/img/icon/icon.svg"), none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#main-nav {
+  float: right;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

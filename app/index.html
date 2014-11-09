@@ -1,11 +1,108 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Simmer
 ---
 
-<section class="home posts">
-  <h1>Blog Posts</h1>
-  {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
-  {% endfor %}
-</section>
+<div id="home">
+
+  <div class="primary banner">
+    <h1>Science in action</h1>
+    <br /><br /><br />
+
+    <div class="subtitle">
+      Stop wasting time fighting with your software.<br />
+      Get back to science.
+    </div>
+
+    {% include mailchimp.html %}
+  </div>
+
+  <div class="ui vertical segment section">
+    <h2>It's time to get serious</h2>
+
+    <p>Scientific software is barely more pleasant to use than two decades ago.
+      These days, we have the Internet, virtualisation and cloud computing.
+      It's time to modernise your workflow, and stop wasting your precious time and money.</p>
+  </div>
+
+  <div class="ui vertical segment decoration section">
+    <i class="large lab icon"></i>
+  </div>
+
+  <div class="ui vertical segment alternate section">
+    <div class="ui vertically divided grid">
+      <div class="two column row">
+        <div class="column">
+          <h3>Instant Execution</h3>
+
+          <p>No more banging your head against arcane install procedures and inconsistent
+            command-line interfaces. Simmer presents all software with familiar HTML forms.</p>
+        </div>
+        <div class="center aligned column">
+          <i class="feature rocket icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical segment section">
+    <div class="ui vertically divided grid">
+      <div class="two column row">
+        <div class="center aligned column">
+          <i class="feature icon signal"></i>
+        </div>
+        <div class="column">
+          <h3>High Performance, Low Maintenance</h3>
+
+          <p>Simmer will take care of all your computing needs, running your jobs across a cluster
+            of modern servers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical segment alternate section">
+    <div class="ui vertically divided grid">
+      <div class="two column row">
+        <div class="column">
+          <h3>Easy To Publish</h3>
+
+          <p>Publishing a piece of software requires only two simple files, and no changes to
+            the original source code.</p>
+        </div>
+        <div class="center aligned column">
+          <i class="feature bullhorn icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="secondary banner">
+    <h1><br />Supporting Open Science</h1>
+  </div>
+
+  <div class="ui vertical segment section">
+    <p>Simmer proudly supports the Open Science community.</p>
+
+    <p><a href="https://github.com/simmer"><i class="large github sign icon"></i> GitHub</a></p>
+
+    <p><a href="https://github.com/similitude"><i class="large github sign icon"></i>
+      Similitude</a></p>
+  </div>
+
+  <div class="ui vertical segment decoration section">
+    <i class="large lab icon"></i>
+  </div>
+
+  <div class="ui vertical cta segment section">
+    <p>Sadly, Simmer is still in development. However, if you're interested in early access and
+      the opportunity to contribute to the future of research infrastructure,
+      <a href="/contact">let us know</a>, and:</p>
+
+    {% include mailchimp.html %}
+
+    <p class="subtle">We take your privacy seriously, and will never share your email address with
+      anyone without your explicit permission.</p>
+  </div>
+
+</div>
