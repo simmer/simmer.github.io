@@ -9,6 +9,7 @@ author:
   name: Oliver Lade
   email: oliver@runsimmer.com
 
+safe: true
 include: ['.htaccess']
 
 source: app
