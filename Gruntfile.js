@@ -18,8 +18,8 @@ module.exports = function (grunt) {
   grunt.initConfig({
     // Configurable paths
     yeoman: {
-      app: 'app',
-      dist: 'dist'
+      app: '',
+      dist: '_site'
     },
     watch: {
       sass: {

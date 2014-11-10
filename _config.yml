@@ -12,9 +12,6 @@ author:
 safe: true
 include: ['.htaccess']
 
-source: app
-destination: dist
-
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 # Uncomment when this can work with vanilla Jekyll as well.
 #future: true
