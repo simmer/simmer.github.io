@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 
-gem 'redcarpet'
-gem 'sass', '>=3.2'
+gem 'github-pages'
+gem 'scss-lint', '>= 0.18.0'

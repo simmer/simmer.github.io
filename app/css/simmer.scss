@@ -1,7 +1,14 @@
+---
+# Comment to ensure Jekyll parses this file.
+---
+
 /* Includes */
+@import 'main';
+@import 'theme';
 @import 'home';
 @import 'team';
 @import 'contact';
+@import 'blog';
 
 @font-face {
   font-family: "Latin Modern";
@@ -25,15 +32,14 @@
 }
 
 html, body {
-  padding: 0;
+  font-family: $body-family;
+  font-size: $primary-size;
   margin: 0;
-  font-family: "Lato", serif;
-  font-size: 16pt;
-  -webkit-font-smoothing: subpixel-antialiased;
+  padding: 0;
 }
 
 h1, h2, h3 {
-  font-family: "Latin Modern", serif;
+  font-family: $heading-family;
   line-height: 2em;
   margin: 0;
   padding: 0;

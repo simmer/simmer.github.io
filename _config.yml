@@ -7,11 +7,7 @@ name: Simmer
 description: A Web platform for science in action.
 author:
   name: Oliver Lade
-  email: piemater21@gmail.com
-
-# Grunt handles images and assets.
-exclude: ['img', 'css', 'js', 'fonts',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+  email: oliver@runsimmer.com
 
 include: ['.htaccess']
 
@@ -19,11 +15,17 @@ source: app
 destination: dist
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
-future: true
-show_drafts: true
+# Uncomment when this can work with vanilla Jekyll as well.
+#future: true
+#show_drafts: true
+excerpt_separator: <!--more-->
+permalink: pretty
 
-# Markdown library
-markdown: redcarpet
+sass:
+  sass_dir: _scss
+
+# Markdown library: no explicit preference, yet.
+# markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
-pygments: true
+highlighter: pygments

@@ -22,11 +22,14 @@ h1 {
 
   &.primary {
     height: 800px;
-    background-image: url("/img/chef-tools.jpg");
+    background-image: url("/img/banner/chef-tools.jpg");
+    &.short {
+      height: 300px;
+    }
   }
   &.secondary {
     height: 500px;
-    background-image: url("/img/open-science.jpg");
+    background-image: url("/img/banner/open-science.jpg");
   }
 }
 

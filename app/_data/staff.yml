@@ -1,0 +1,14 @@
+oliver:
+  firstName: Oliver
+  lastName: Lade
+  name: Oliver Lade
+  position: Founder, CEO
+  email: oliver@runsimmer.com
+  description: "Oliver is a software engineer, keen entrepreneur and founder of Simmer.
+    He gets very excited about science, engineering and simulation, and is passionate about making
+    it easy for everyone."
+  avatar: /img/people/oliver.jpg
+  social:
+    facebook: https://www.facebook.com/oliver.lade
+    google plus: https://plus.google.com/+OliverLade
+    github: https://github.com/orlade

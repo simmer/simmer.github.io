@@ -1,11 +1,17 @@
 /* Team page styles. */
 
-#team .avatar.image {
+#team .avatar.image,
+.byline .avatar.image {
   width: 100px;
   height: 100px;
 }
 
-#team .member.info {
+.byline .avatar.image {
+  float: left;
+}
+
+#team .member.info,
+.byline {
   display: inline-block;
   vertical-align: middle;
 

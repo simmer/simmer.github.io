@@ -41,7 +41,9 @@ module.exports = function (grunt) {
       jekyll: {
         files: [
           '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-          '!<%= yeoman.app %>/_bower_components/**/*'
+          '!<%= yeoman.app %>/_bower_components/**/*',
+          '!<%= yeoman.app %>/{img,css,js,fonts}',
+          '!<%= yeoman.app %>/**.{png,.jpg,.jpeg,.gif,.webp,.svg,.ico}'
         ],
         tasks: ['jekyll:server']
       },
@@ -190,7 +192,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          dest: '<%= yeoman.dist %>',
+          dest: '<%= yeoman.dist %>'
         }
       },
       server: {
@@ -213,7 +215,7 @@ module.exports = function (grunt) {
     },
     usemin: {
       options: {
-        assetsDirs: '<%= yeoman.dist %>',
+        assetsDirs: '<%= yeoman.dist %>'
       },
       html: ['<%= yeoman.dist %>/**/*.html'],
       css: ['<%= yeoman.dist %>/css/**/*.css']
@@ -353,9 +355,16 @@ module.exports = function (grunt) {
       check: {
         src: [
           '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
+          // Don't lint Semantic UI's CSS, it's a bit hairy.
+          '!<%= yeoman.app %>/css/**/semantic.css'
         ]
       }
+    },
+    scsslint: {
+      // See https://www.npmjs.org/package/grunt-scss-lint for options.
+      allFiles: [
+        '<%= yeoman.app %>/_scss/**/*.scss'
+      ]
     },
     concurrent: {
       server: [
@@ -394,9 +403,9 @@ module.exports = function (grunt) {
 
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
-  //   'clean:server',
-  //   'concurrent:test',
-  //   'connect:test'
+    //   'clean:server',
+    //   'concurrent:test',
+    //   'connect:test'
   ]);
 
   grunt.registerTask('check', [
@@ -406,7 +415,8 @@ module.exports = function (grunt) {
     'coffeelint:check',
     'coffee:dist',
     'jshint:all',
-    'csslint:check'
+    'csslint:check',
+    'scsslint'
   ]);
 
   grunt.registerTask('build', [
@@ -424,14 +434,14 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
-    ]);
+  ]);
 
   grunt.registerTask('deploy', [
     'check',
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
 
   grunt.registerTask('default', [
     'check',

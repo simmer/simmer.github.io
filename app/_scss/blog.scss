@@ -1,0 +1,28 @@
+@import 'theme';
+
+.post {
+  .title {
+    padding: 0;
+  }
+  .content {
+    color: $primary-color;
+  }
+}
+
+.posts.list {
+  .item {
+    width: 90%;
+  }
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  .meta {
+    color: $primary-color-subtle;
+    font-size: $smaller;
+  }
+
+  .excerpt {
+    text-decoration: none;
+  }
+}

@@ -1,27 +1,24 @@
 ---
 layout: default
 title: Simmer | Team
-
-oliver:
-  facebook: https://www.facebook.com/oliver.lade
-  google plus: https://plus.google.com/+OliverLade
-  github: https://github.com/orlade
 ---
 
 <div id="team">
 
-  <div class="ui segment">
-    <img class="ui circular avatar image" src="/img/people/oliver.jpg">
+  <div class="ui vertical segment section">
+    {% for person in site.data.staff %}
+    <img class="ui circular avatar image" src="{{person[1].avatar}}">
 
     <div class="member info">
-      <div class="name">Oliver Lade</div>
-      <div class="position">Founder</div>
+      <div class="name">{{person[1].name}}</div>
+      <div class="position">{{person[1].position}}</div>
       <div class="social">
-        {% for service in page.oliver %}
-          <a href="{{service[1]}}"><i class="{{service[0]}} sign icon"></i></a>
+        {% for service in person[1].social %}
+        <a href="{{service[1]}}"><i class="{{service[0]}} sign icon"></i></a>
         {% endfor %}
       </div>
     </div>
+    {% endfor %}
   </div>
 
 </div>
